@@ -1,3 +1,4 @@
+#!/usr/local/lib/python
 # -*- coding: utf-8 -*-
 """
 Created on Thu Mar 29 14:54:42 2018
@@ -107,14 +108,15 @@ if __name__ == '__main__':
         basicusers.append(temp)
     result_user = list(set(users).intersection(set(basicusers)))
   
-#    tele_and_user = session_us.query(User.user_id, User.telephone).filter(User.user_id in result_user).all()
+    tele_and_user = session_us.query(User.user_id, User.telephone).filter(User.user_id in result_user).all()
     
 #    path = '/home/dingyuxi/user.txt'
 #    fileopen = open(path,'w')
 #    for user in result_user:
 #        fileopen.write(str(user)+"\n")
 #    fileopen.close()
-    
+#    data = session_ra.query(Dyx_Temp).filter(Dyx_Temp.order_id=='1831125').all()
+#    print(data)
 #    list1 = [1,2,3,444,555]
     for userid in result_user:
         user_obj = User(user_id = userid)
